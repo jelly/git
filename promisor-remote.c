@@ -145,4 +145,3 @@ int promisor_remote_get_direct(const struct object_id *oids, int oid_nr)
 
 	return -1;
 }
-
