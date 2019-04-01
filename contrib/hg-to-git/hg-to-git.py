@@ -178,7 +178,7 @@ for cset in range(int(tip) + 1):
     #get comment
     (fdcomment, filecomment) = tempfile.mkstemp()
     csetcomment = os.popen('hg log -r %d --template "{desc}"' % cset).read().strip()
-    os.write(fdcomment, csetcomment)
+    os.write(fdcomment, csetcomment.encode())
     os.close(fdcomment)
 
     print('-----------------------------------------')
