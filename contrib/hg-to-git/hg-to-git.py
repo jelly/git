@@ -155,7 +155,7 @@ for cset in range(1, int(tip) + 1):
         else:
             hgbranch[str(cset)] = "branch-" + str(cset)
 
-if not hgvers.has_key("0"):
+if "0" not in hgvers:
     print('creating repository')
     os.system('git init')
 
@@ -163,7 +163,7 @@ if not hgvers.has_key("0"):
 for cset in range(int(tip) + 1):
 
     # incremental, already seen
-    if hgvers.has_key(str(cset)):
+    if str(cset) in hgvers:
         continue
     hgnewcsets += 1
 
