@@ -33,7 +33,7 @@ def printlines(list):
         fast_import.write(str + "\n")
 
 for zipfile in argv[1:]:
-    commit_time = 0
+    commit_time = (0, 0, 0, 0, 0, 0)
     next_mark = 1
     common_prefix = None
     mark = dict()
